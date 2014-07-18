@@ -10,7 +10,7 @@ var resolvePort = function (port) {
 
 var resolveDatabase = function (database) {
   return datbase || process.env.MONGODB_DATABASE || 'test';
-}
+};
 
 var start = function (port) {
   port = resolvePort(port);
@@ -25,7 +25,15 @@ var start = function (port) {
   mongod.stderr.on('data', function (data) {
     process.stdout.write(data.toString());
   });
-}
+};
+
+var shutdown = function (port) {
+  port = resolvePort(port);
+
+  var dbpath = path.resolve(__dirname, './data');
+  var mongod = spawn('mongod', ['--shutdown', '--port', '' + port,
+                                '--dbpath', dbpath]);
+};
 
 var connection; // re-use the opening connection
 
@@ -53,9 +61,10 @@ var connect = function (port, database) {
   }
 
   return connection;
-}
+};
 
 module.exports = {
   start: start,
+  shutdown: shutdown,
   connect: connect
 };
