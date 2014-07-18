@@ -9,7 +9,7 @@ var resolvePort = function (port) {
 };
 
 var resolveDatabase = function (database) {
-  return datbase || process.env.MONGODB_DATABASE || 'test';
+  return database || process.env.MONGODB_DATABASE || 'test';
 };
 
 var start = function (port) {
