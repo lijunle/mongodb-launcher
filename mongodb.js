@@ -1,5 +1,6 @@
 'use strict';
 
+var mongoose = require('mongoose');
 var spawn = require('child_process').spawn;
 var path = require('path');
 var util = require('util');
