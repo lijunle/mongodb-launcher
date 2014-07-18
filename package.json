@@ -1,7 +1,7 @@
 {
   "name": "mongodb-launcher",
   "version": "0.0.1",
-  "description": "Mongodb Launcher.",
+  "description": "A Mongodb Launcher.",
   "main": "mongodb.js",
   "scripts": {
     "start": "node index.js"
