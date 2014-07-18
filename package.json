@@ -1,0 +1,11 @@
+{
+  "name": "mongodb-launcher",
+  "version": "0.0.1",
+  "description": "Mongodb Launcher.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Junle Li <lijunle@gmail.com>",
+  "private": true
+}

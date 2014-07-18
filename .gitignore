@@ -1,0 +1,9 @@
+# ignore npm related files
+node_modules/
+npm-debug.log
+
+# ignore data folder
+data/*
+
+# don't ignore git-keep folder
+!.gitkeep
