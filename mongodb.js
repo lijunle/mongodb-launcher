@@ -67,5 +67,6 @@ var connect = function (port, database) {
 module.exports = {
   start: start,
   shutdown: shutdown,
-  connect: connect
+  connect: connect,
+  Schema: mongoose.Schema
 };
